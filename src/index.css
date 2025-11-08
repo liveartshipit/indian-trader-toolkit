@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 0 0% 100%;
+    --color-foreground: 216 15% 20%;
+    --color-primary: 212 90% 48%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 212 90% 35%;
+    --color-secondary-foreground: 0 0% 100%;
+    --color-tertiary: 158 70% 45%;
+    --color-tertiary-foreground: 0 0% 100%;
+    --color-neutral: 0 0% 98%;
+    --color-neutral-foreground: 216 15% 20%;
+    --color-muted: 0 0% 94%;
+    --color-muted-foreground: 0 0% 40%;
+    --color-accent: 0 0% 94%;
+    --color-accent-foreground: 216 15% 20%;
+    --color-destructive: 0 84% 60%;
+    --color-destructive-foreground: 0 0% 100%;
+    --color-border: 0 0% 88%;
+    --color-input: 0 0% 88%;
+    --color-ring: 212 90% 48%;
+    --color-success: 145 66% 40%;
+    --color-warning: 35 90% 50%;
+    --color-card: 0 0% 100%;
+    --color-card-foreground: 216 15% 20%;
+    --color-popover: 0 0% 100%;
+    --color-popover-foreground: 216 15% 20%;
+    --font-sans: "Inter", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+    --radius: 0.8rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    @apply text-foreground;
+  }
+
+  p,
+  span,
+  div,
+  a,
+  li {
+    @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
